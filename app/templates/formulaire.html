@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Formulaire d'événement</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body style="background-color: #f0f0f0; padding: 20px;">
+
+    <div class="container" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px #888;">
+        <h1 class="text-center" style="color: #007bff;">Formulaire d'événement</h1>
+        <br>
+        <div class="row justify-content-center">
+            <form method="post" >
+                {% csrf_token %}
+                    <div class="row justify-content-center">
+                    <b>Pseudo Insta : {{ client.nom }}</b>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date de demande : {{ client.datededemande }}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  inbox : {{ client.path }}
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <form method="get" action="">
+                <div class="row justify-content-center">
+                <button id="next-button" class="btn btn-primary">Changer de Client Sans Valider --></button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <form method="post" >
+                {% csrf_token %}
+                    <div class="row justify-content-center">
+                <div class="form-group" style="padding: 20px;" >
+                    <label for="{{ form.nom_insta.id_for_label }}" style="color: #007bff;">Nom Instagram :</label>
+                    {{ form.nom_insta }}
+                    <small id="{{ form.nom_insta.id_for_label }}Help" class="form-text text-muted">Entrez votre nom Instagram.</small>
+                </div>
+
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.genre.id_for_label }}" style="color: #007bff;">Genre :</label>
+                    {{ form.genre }}
+                    <small id="{{ form.genre.id_for_label }}Help" class="form-text text-muted">Choisissez entre "Féminin" ou "Masculin".</small>
+                </div>
+
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.nb_abo.id_for_label }}" style="color: #007bff;">Nombre d'abonnés :</label>
+                    {{ form.nb_abo }}
+                    <small id="{{ form.nb_abo.id_for_label }}Help" class="form-text text-muted">Entrez le nombre d'abonnés.</small>
+                </div>
+                </div>
+                    <div class="row justify-content-center">
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.origine.id_for_label }}" style="color: #007bff;">Origine :</label>
+                    {{ form.origine }}
+                    <small id="{{ form.origine.id_for_label }}Help" class="form-text text-muted">Sélectionnez votre origine.</small>
+                </div>
+
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.date_demande.id_for_label }}" style="color: #007bff;">Date de demande :</label>
+                    {{ form.date_demande }}
+                    <small id="{{ form.date_demande.id_for_label }}Help" class="form-text text-muted">Sélectionnez la date de demande.</small>
+                </div>
+
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.date_event.id_for_label }}" style="color: #007bff;">Date de l'événement :</label>
+                    {{ form.date_event }}
+                    <small id="{{ form.date_event.id_for_label }}Help" class="form-text text-muted">Sélectionnez la date de l'événement.</small>
+                </div>
+                                        </div>
+<div class="row justify-content-center">
+
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.type_mariage.id_for_label }}" style="color: #007bff;">Type de mariage :</label>
+                    {{ form.type_mariage }}
+                    <small id="{{ form.type_mariage.id_for_label }}Help" class="form-text text-muted">Sélectionnez le type de mariage.</small>
+                </div>
+
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.salle.id_for_label }}" style="color: #007bff;">Salle :</label>
+                    {{ form.salle }}
+                    <small id="{{ form.salle.id_for_label }}Help" class="form-text text-muted">Entrez le nom de la salle.</small>
+                </div>
+                    </div>
+<div class="row justify-content-center">
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.photobooth.id_for_label }}" style="color: #007bff;">Photobooth :</label>
+                    {{ form.photobooth }}
+                    <small id="{{ form.photobooth.id_for_label }}Help" class="form-text text-muted">Sélectionnez le type de photobooth.</small>
+                </div>
+
+                <div class="form-check" style="padding: 20px;">
+                    <input class="form-check-input" type="checkbox" id="{{ form.mur_floral.id_for_label }}" name="{{ form.mur_floral.name }}">
+                    <label class="form-check-label" for="{{ form.mur_floral.id_for_label }}" style="color: #007bff;">Mur Floral :</label>
+                    <small id="{{ form.mur_floral.id_for_label }}Help" class="form-text text-muted">Cochez si vous souhaitez un mur floral.</small>
+                </div>
+
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.prix_propose.id_for_label }}" style="color: #007bff;">Prix proposé :</label>
+                    {{ form.prix_propose }}
+                    <small id="{{ form.prix_propose.id_for_label }}Help" class="form-text text-muted">Entrez le prix proposé.</small>
+                </div>
+                    </div>
+<div class="row justify-content-center">
+                <div class="form-check" style="padding: 20px;">
+                    <input class="form-check-input" type="checkbox" id="{{ form.ok.id_for_label }}" name="{{ form.ok.name }}">
+                    <label class="form-check-label" for="{{ form.ok.id_for_label }}" style="color: #007bff;">OK :</label>
+                    <small id="{{ form.ok.id_for_label }}Help" class="form-text text-muted">Cochez si elle à reserver.</small>
+                </div>
+
+                <div class="form-check" style="padding: 20px;">
+                    <input class="form-check-input" type="checkbox" id="{{ form.relance.id_for_label }}" name="{{ form.relance.name }}">
+                    <label class="form-check-label" for="{{ form.relance.id_for_label }}" style="color: #007bff;">Relance :</label>
+                    <small id="{{ form.relance.id_for_label }}Help" class="form-text text-muted">Cochez s'il y a une relance.</small>
+                </div>
+
+                <div class="form-check" style="padding: 20px;">
+                    <input class="form-check-input" type="checkbox" id="{{ form.abonner.id_for_label }}" name="{{ form.abonner.name }}">
+                    <label class="form-check-label" for="{{ form.abonner.id_for_label }}" style="color: #007bff;">Abonné :</label>
+                    <small id="{{ form.abonner.id_for_label }}Help" class="form-text text-muted">Cochez si elle est abonnée à Myselfiebooth.</small>
+                </div>
+
+                <div class="form-check" style="padding: 20px;">
+                    <input class="form-check-input" type="checkbox" id="{{ form.chezconcurrent.id_for_label }}" name="{{ form.chezconcurrent.name }}">
+                    <label class="form-check-label" for="{{ form.chezconcurrent.id_for_label }}" style="color: #007bff;">Parti chez un concu :</label>
+                    <small id="{{ form.chezconcurrent.id_for_label }}Help" class="form-text text-muted">Cochez si elle est à trouver un autre photobooth.</small>
+                </div>
+
+</div>
+
+            <div class="row justify-content-center">
+                                <div class="form-check" style="padding: 20px;">
+                    <input class="form-check-input" type="checkbox" id="{{ form.pas_de_dispo.id_for_label }}" name="{{ form.pas_de_dispo.name }}">
+                    <label class="form-check-label" for="{{ form.pas_de_dispo.id_for_label }}" style="color: #007bff;">Pas de Dispo :</label>
+                    <small id="{{ form.pas_de_dispo.id_for_label }}Help" class="form-text text-muted">Cochez si on était pas dispo</small>
+                </div>
+                <div class="form-group" style="padding: 20px;">
+                    <label for="{{ form.commentaire.id_for_label }}" style="color: #007bff;">Commentaire :</label>
+                    {{ form.commentaire }}
+                    <small id="{{ form.commentaire.id_for_label }}Help" class="form-text text-muted">Entrez un commentaire.</small>
+                </div>
+            </div>
+    <div class="row justify-content-center">
+                <div class="text-center" style="padding: 20px;">
+                    <button type="submit" class="btn btn-primary">Soumettre</button>
+                </div>
+        </div>
+                </form>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+            <h1 class="text-center" style="color: #007bff;">Tableau de données</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Genre</th>
+                        <th>Nb Abo</th>
+                        <th>Origine</th>
+                        <th>Date de Demande</th>
+                        <th>Date Event</th>
+                        <th>Type de Mariage</th>
+                        <th>Salle</th>
+                        <th>Photobooth</th>
+                        <th>Mur Floral</th>
+                        <th>Prix Proposé</th>
+                        <th>OK</th>
+                        <th>Relance</th>
+                        <th>Abonné</th>
+                        <th>Dispo</th>
+                        <th>Commentaire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ligne in data %}
+                    <tr>
+                        <td>{{ ligne.nom_insta }}</td>
+                        <td>{{ ligne.genre }}</td>
+                        <td>{{ ligne.nb_abo }}</td>
+                        <td>{{ ligne.origine }}</td>
+                        <td>{{ ligne.date_demande }}</td>
+                        <td>{{ ligne.date_event }}</td>
+                        <td>{{ ligne.type_mariage }}</td>
+                        <td>{{ ligne.salle }}</td>
+                        <td>{{ ligne.photobooth }}</td>
+                        <td>{{ ligne.mur_floral }}</td>
+                        <td>{{ ligne.prix_propose }}</td>
+                        <td>{{ ligne.abonner }}</td>
+                        <td>{{ ligne.ok }}</td>
+                        <td>{{ ligne.relance }}</td>
+                        <td>{{ ligne.abonner }}</td>
+                        <td>{{ ligne.pas_de_dispo }}</td>
+                        <td>{{ ligne.commentaire }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    <div id="csv-data">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById('next-button').addEventListener('click', function() {
+                    fetch('/next_row')
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data.row);
+                        });
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
