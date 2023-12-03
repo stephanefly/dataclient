@@ -1,3 +1,5 @@
+import os
+import json
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from .forms import FormulaireEvenementForm
@@ -76,3 +78,29 @@ def next_row(request):
     new_row = rows[current_row_index] if current_row_index < len(rows) else None
 
     return JsonResponse({'row': new_row})
+
+
+def preparation_text(request):
+    out = r'données\reformat'
+    a = r'données\instagram\messages\inbox'
+
+    lst_repertory_message = os.listdir(a)
+    for repertory in lst_repertory_message:
+        message_json = os.path.join(a, repertory, 'message_1.json')
+        with open(message_json, 'r') as fichier:
+            # Charger les données JSON depuis le fichier
+            donnees_json = json.load(fichier)
+
+        # Extraire les messages
+        messages = donnees_json.get("messages", [])
+        # Créer un fichier texte et y écrire le contenu des messages
+        chemin_fichier_texte = os.path.join(out, repertory + '.txt')
+
+        with open(chemin_fichier_texte, 'w', encoding='utf-8') as fichier_texte:
+            for message in messages:
+                sender_name = message.get("sender_name", "")
+                timestamp_ms = message.get("timestamp_ms", "")
+                content = message.get("content", "")
+
+                # Écrire le contenu dans le fichier texte
+                fichier_texte.write(f"{sender_name} ({timestamp_ms}): {content}\n\n")
