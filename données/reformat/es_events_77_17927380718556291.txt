@@ -1,0 +1,12 @@
+MOI (1668767551023): You sent an attachment.
+
+es_events_77 (1668180001895): Oups dÃ©solÃ©e
+
+es_events_77 (1668179997182): Discussion vidÃ©o terminÃ©e
+
+es_events_77 (1668179994166): es_events_77 a dÃ©marrÃ© une discussion vidÃ©o
+
+es_events_77 (1668179993425): es_events_77 shared a story.
+
+MOI (1668179924721): You shared a story.
+

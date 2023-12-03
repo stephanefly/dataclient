@@ -1,0 +1,27 @@
+glv.f (1645283133681): A aimÃ© un message
+
+MOI (1645207695799): La rÃ©duction est toujours maintenue ð
+
+MOI (1645207681323): 
+
+MOI (1645207673511): Bonjour ð voici nos tarifs :
+
+MOI (1644574959995): Bonjour, avez vous rÃ©flÃ©chi Ã  une Ã©ventuelle rÃ©servation ? ð
+
+MOI (1644240953417): Oui c'est compris
+
+glv.f (1644240886725): Oui jâai une autre question yâa tâil le frais dâinstallation comprise ?
+
+MOI (1644240801630): N'hÃ©sitez pas Ã  revenir vers nous si vous avez des questions ð
+
+glv.f (1644240710581): Okey merci beaucoup !
+
+MOI (1644240418581): Nous faisons des rÃ©ductions de 50 euros en ce moment ð
+
+MOI (1644240378550): 
+
+MOI (1644240372146): Bonjour, Voici nos tarifs
+
+glv.f (1644237093802): Bonjour , je vous contacte afin dâavoir des informations sur vos prestations. Je souhaiterais savoir quel sont vos tarifs a la journÃ©e ou Ã  lâheure ?
+Merci de votre rÃ©ponse !
+

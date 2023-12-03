@@ -1,0 +1,23 @@
+k.abi_02 (1697520313703): Oui*
+
+k.abi_02 (1697520309071): Ou pas de souci
+
+MOI (1697473473199): Pas de soucis, nâhÃ©sitez si jamais si vous souhaitez plus dâinformations
+
+k.abi_02 (1697473249913): Bonjour, non pour lâinstant je ne compte pas rÃ©server. Je veux juste mâinformer  sur les prix auprÃ¨s des diffÃ©rents prestataires lâÃ©vÃ¨nement est prÃ©vu pour Juillet ducoup je regarde juste. 
+Mais câest gentille de me demander, si tout est bon je reviens vers vous pour confirmer la prestation.
+
+MOI (1697468107240): Bonjour avez-vous rÃ©flÃ©chi Ã  une Ã©ventuelle rÃ©servation ?
+
+k.abi_02 (1696842589019): Dâaccord merci encore je vais voir
+
+MOI (1696842555691): Le photobooth est Ã  400â¬ et en option le mur floral a 50â¬
+
+k.abi_02 (1696842520511): Combien Ã  ton dâimpression ?
+
+k.abi_02 (1696842500323): Le tout est Ã  50 euros ?
+
+MOI (1696842478825): Bonjour câest 50â¬ avec le photobooth ð
+
+k.abi_02 (1696842413414): Bonjour le mur floral avec le photobooth sont Ã  combien je vous prie ?
+
